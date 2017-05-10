@@ -17,6 +17,24 @@ Thermostat.prototype.resetTemp = function(){
   this.temprature = 20
 };
 
+Thermostat.prototype.energyCheck = function(){
+if (this.temprature < 18){
+  return 'low-usage'
+} else if (this.temprature > 25){
+  return 'high-usage'
+} else  {
+return 'medium-usage'
+};
+};
+
+Thermostat.prototype.powerSaveCopernicus = function(){
+  if (this.powerSave === 'on') {
+   this.powerSave = 'off'
+ } else {
+   this.powerSave = 'on'
+ };
+};
+
  function powerCheck(powerSave,temp){
   if (this.temprature + temp > 25 && this.powerSave === 'on') {
    throw new Error('Max temp is 25 while powerSave is on')

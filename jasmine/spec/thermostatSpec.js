@@ -9,9 +9,9 @@ describe('Thermostat', function(){
     });
 
     it('can increase temprature', function(){
-       thermostat.increaseTemp(5);
+      thermostat.increaseTemp(5);
 
-         expect(thermostat.temprature).toEqual(25);
+      expect(thermostat.temprature).toEqual(25);
     });
     it('can decrease temprature', function(){
       thermostat.decreaseTemp(5);
@@ -42,6 +42,15 @@ describe('Thermostat', function(){
         thermostat.powerSave = 'off'
         thermostat.increaseTemp(14);
       }).toThrow(new Error("Max temp is 32 while powerSave is off"));
+    });
+    it('resets powersave button', function(){
+      thermostat.powerSaveCopernicus()
+      expect(thermostat.powerSave).toEqual('off')
+
+    });
+    it('returns current energy status', function(){
+      thermostat.decreaseTemp(7)
+      expect(thermostat.energyCheck()).toEqual('low-usage')
     });
 
   });
