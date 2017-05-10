@@ -9,7 +9,12 @@ Thermostat.prototype.increaseTemp = function(temp){
 };
 
 Thermostat.prototype.decreaseTemp = function(temp){
+  minimumTempCheck.apply(this, [temp])
   this.temprature = this.temprature - temp;
+};
+
+Thermostat.prototype.resetTemp = function(){
+  this.temprature = 20
 };
 
  function powerCheck(powerSave,temp){
@@ -18,4 +23,10 @@ Thermostat.prototype.decreaseTemp = function(temp){
  } else if (this.temprature + temp > 32 && this.powerSave ==='off'){
    throw new Error('Max temp is 32 while powerSave is off')
  };
+};
+
+function minimumTempCheck(temp){
+  if (this.temprature - temp < 10) {
+    throw new Error('Minimum temprature is 10')
+  };
 };

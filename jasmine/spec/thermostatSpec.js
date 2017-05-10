@@ -17,6 +17,16 @@ describe('Thermostat', function(){
       thermostat.decreaseTemp(5);
       expect(thermostat.temprature).toEqual(15)
     });
+    it('has a minimum temprature of 10', function(){
+      expect(function(){
+        thermostat.decreaseTemp(12);
+      }).toThrow(new Error("Minimum temprature is 10"));
+    });
+    it('can reset temprature back to 20', function(){
+      thermostat.decreaseTemp(5)
+      thermostat.resetTemp()
+      expect(thermostat.temprature).toEqual(20)
+    });
   });
 
   describe('powerSave', function(){
