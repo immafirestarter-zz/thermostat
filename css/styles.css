@@ -1,0 +1,92 @@
+
+body {
+    background-image: url("http://wallpaper-gallery.net/images/backgrounds/backgrounds-20.jpg");
+}
+
+h1 {
+    font-size: 7em;
+    text-align: center;
+vertical-align: middle;
+line-height: 90px;
+color: pink;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: left;
+vertical-align: top;
+line-height: 45px;
+color: pink;
+}
+
+li {
+  font-size: 1em;
+  text-align: left;
+vertical-align: top;
+line-height: 45px;
+color: pink;
+
+}
+
+label {
+  font-size: 3em;
+  text-align: center;
+vertical-align: middle;
+line-height: 90px;
+color: white;
+
+
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+}
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+}
+
+ul {
+    transform: rotate(180deg);
+}
+ul > li {
+    transform: rotate(-180deg);
+}
+
+input[type=submit] {
+    width: 25%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 460;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#temperature {
+  font-size: 7em;
+  text-align: center;
+vertical-align: middle;
+line-height: 90px;
+color: pink; }
+
+  fo
+}

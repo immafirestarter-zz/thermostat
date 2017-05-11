@@ -1,0 +1,67 @@
+
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <script src='jquery.js' > </script>
+  <script type = "text/javascript" language = "javascript">
+          $(document).ready(function() {
+             $("p").css("background-color", "yellow");
+          });
+       </script>
+
+</head>
+
+<body>
+  <div class='container'>
+    <h1> THERMOSTAT </h1>
+    <h2> Temperature  <span id='temp'></span> </h2>
+    <h3> Energy Check </h3>
+
+
+<label class="switch">
+      SAVE POWER BRO    <input onclick='PS()'; type="checkbox" checked>
+          <div class="slider"></div>
+        </label>
+
+        <label>
+          <button onclick='increase()'; id = 'increase' > + </button>
+        </label>
+        <label>
+          <button onclick='decrease()'; id = 'decrease' > - </button>
+</label>
+<label>
+  <button onclick='reset()'; > RESET </button>
+</label>
+
+<script type='text/javascript' src="jasmine/src/thermostat.js"></script>
+<script>
+var thermostat = new Thermostat
+function increase(){
+thermostat.increaseTemp(1)
+$('#temp').text(thermostat.temprature);
+;}
+function decrease(){
+thermostat.decreaseTemp(1)
+$('#temp').text(thermostat.temprature);
+;}
+function reset(){
+thermostat.resetTemp()
+$('#temp').text(thermostat.temprature);
+;}
+function PS(){
+thermostat.powerSaveCopernicus()
+$('#temp').text(thermostat.temprature);
+;}
+$('#temp').text(thermostat.temprature);
+</script>
+</body>
+</html>

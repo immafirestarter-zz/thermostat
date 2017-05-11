@@ -33,7 +33,17 @@ Thermostat.prototype.powerSaveCopernicus = function(){
  } else {
    this.powerSave = 'on'
  };
+ if (this.temprature > 25 && this.powerSave === 'on')
+ this.temprature = 25
 };
+
+// Thermostat.prototype.powerSaveReset = function(){
+//   if (this.temprature > 25 && this.powerSave === 'on')
+//   this.temprature = 25
+//   else {
+//     this.temprature = this.temprature
+//   };
+// };
 
  function powerCheck(powerSave,temp){
   if (this.temprature + temp > 25 && this.powerSave === 'on') {
